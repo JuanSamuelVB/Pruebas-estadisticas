@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnProbar = new System.Windows.Forms.Button();
+            this.btnExplorar = new System.Windows.Forms.Button();
+            this.btnHacerPrueba = new System.Windows.Forms.Button();
             this.lblDm = new System.Windows.Forms.Label();
             this.lblDam = new System.Windows.Forms.Label();
             this.cmbAlpha = new System.Windows.Forms.ComboBox();
@@ -57,26 +57,26 @@
             this.textBox1.Size = new System.Drawing.Size(169, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // button1
+            // btnExplorar
             // 
-            this.button1.Location = new System.Drawing.Point(343, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Explorar...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExplorar.Location = new System.Drawing.Point(343, 10);
+            this.btnExplorar.Name = "btnExplorar";
+            this.btnExplorar.Size = new System.Drawing.Size(88, 27);
+            this.btnExplorar.TabIndex = 2;
+            this.btnExplorar.Text = "Explorar...";
+            this.btnExplorar.UseVisualStyleBackColor = true;
+            this.btnExplorar.Click += new System.EventHandler(this.btnExplorar_Click);
             // 
-            // btnProbar
+            // btnHacerPrueba
             // 
-            this.btnProbar.Enabled = false;
-            this.btnProbar.Location = new System.Drawing.Point(343, 99);
-            this.btnProbar.Name = "btnProbar";
-            this.btnProbar.Size = new System.Drawing.Size(88, 47);
-            this.btnProbar.TabIndex = 3;
-            this.btnProbar.Text = "Hacer prueba";
-            this.btnProbar.UseVisualStyleBackColor = true;
-            this.btnProbar.Click += new System.EventHandler(this.btnProbar_Click);
+            this.btnHacerPrueba.Enabled = false;
+            this.btnHacerPrueba.Location = new System.Drawing.Point(343, 99);
+            this.btnHacerPrueba.Name = "btnHacerPrueba";
+            this.btnHacerPrueba.Size = new System.Drawing.Size(88, 47);
+            this.btnHacerPrueba.TabIndex = 3;
+            this.btnHacerPrueba.Text = "Hacer prueba";
+            this.btnHacerPrueba.UseVisualStyleBackColor = true;
+            this.btnHacerPrueba.Click += new System.EventHandler(this.btnHacerPrueba_Click);
             // 
             // lblDm
             // 
@@ -141,8 +141,8 @@
             this.Controls.Add(this.cmbAlpha);
             this.Controls.Add(this.lblDam);
             this.Controls.Add(this.lblDm);
-            this.Controls.Add(this.btnProbar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnHacerPrueba);
+            this.Controls.Add(this.btnExplorar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "formKolmogorovSmirnov";
@@ -156,8 +156,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnProbar;
+        private System.Windows.Forms.Button btnExplorar;
+        private System.Windows.Forms.Button btnHacerPrueba;
         private System.Windows.Forms.Label lblDm;
         private System.Windows.Forms.Label lblDam;
         private System.Windows.Forms.ComboBox cmbAlpha;

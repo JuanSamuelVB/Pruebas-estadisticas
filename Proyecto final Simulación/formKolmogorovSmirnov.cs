@@ -35,7 +35,7 @@ namespace Proyecto_final_Simulación
             }
         }
 
-        private void btnProbar_Click(object sender, EventArgs e)
+        private void btnHacerPrueba_Click(object sender, EventArgs e)
         {
             List<double> Xi = new List<double>();
             List<double> Fxi = new List<double>();
@@ -50,17 +50,15 @@ namespace Proyecto_final_Simulación
                 {
                     Xi.Add(Double.Parse(n));
                 }
-
-                Xi.Sort();
             }
             else if (Path.GetExtension(ruta).ToLower() == ".json")
             {
                 string texto = File.ReadAllText(ruta);
 
                 Xi = JsonConvert.DeserializeObject<List<double>>(texto);
-
-                Xi.Sort();
             }
+
+            Xi.Sort();
 
             int m = Xi.Count;
 
@@ -90,7 +88,7 @@ namespace Proyecto_final_Simulación
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExplorar_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialogo = new OpenFileDialog()
             {
@@ -100,7 +98,7 @@ namespace Proyecto_final_Simulación
             if (dialogo.ShowDialog() == DialogResult.OK)
             {
                 textBox1.Text = dialogo.FileName;
-                btnProbar.Enabled = true;
+                btnHacerPrueba.Enabled = true;
             }
         }
 
