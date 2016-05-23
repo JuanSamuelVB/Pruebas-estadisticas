@@ -18,13 +18,7 @@ namespace Proyecto_final_Simulación
         {
             InitializeComponent();
 
-            string[] lineas = Properties.Resources.Tabla_KS.Split('\n');
-            string[][] tabla = new string[lineas.Length][];
-
-            for (int i = 0; i < tabla.Length; i++)
-            {
-                tabla[i] = lineas[i].Split(',');
-            }
+            string[][] tabla = obtenerTablaKS();
 
             for (int i = 1; i < tabla.Length; i++)
             {
@@ -33,58 +27,28 @@ namespace Proyecto_final_Simulación
                     cmbAlpha.Items.Add(tabla[i][0]);
                 }
             }
+
+            cmbAlpha.SelectedItem = cmbAlpha.Items[0];
         }
 
         private void btnHacerPrueba_Click(object sender, EventArgs e)
         {
-            List<double> Xi = new List<double>();
-            List<double> Fxi = new List<double>();
-            List<double> Dm = new List<double>();
-            string ruta = textBox1.Text;
+            lblM.Text = "m";
+            lblDm.Text = "Dm";
+            lblDam.Text = "d(α, m)";
 
-            if (Path.GetExtension(ruta).ToLower() == ".csv")
+            try
             {
-                string texto = File.ReadAllText(ruta);
-                
-                foreach (string n in texto.Split(','))
-                {
-                    Xi.Add(Double.Parse(n));
-                }
+                List<double> Xi = obtenerNumeros();
+                pruebaKS(Xi);
             }
-            else if (Path.GetExtension(ruta).ToLower() == ".json")
+            catch (FormatException)
             {
-                string texto = File.ReadAllText(ruta);
-
-                Xi = JsonConvert.DeserializeObject<List<double>>(texto);
+                MessageBox.Show("Archivo de números aleatorios no válido.", "Error");
             }
-
-            Xi.Sort();
-
-            int m = Xi.Count;
-
-            for (int i = 1; i <= m; i++)
+            catch (InvalidOperationException)
             {
-                Fxi.Add((double)i / (double)m);
-            }
-
-            for (int i = 0; i < m; i++)
-            {
-                Dm.Add(Math.Abs(Fxi[i] - Xi[i]));
-            }
-            
-            double a = Double.Parse((string)cmbAlpha.SelectedItem);
-
-            lblM.Text = "m = " + m.ToString();
-            lblDm.Text = "Dm = " + Dm.Max().ToString();
-            lblDam.Text = "d(α, m) = " + d(a, m).ToString();
-
-            if (Dm.Max() > d(a, m))
-            {
-                lblResultado.Text = "Dm > d(α, m)  ∴  No están distribuidos uniformemente";
-            }
-            else
-            {
-                lblResultado.Text = "Dm < d(α, m)  ∴  Están distribuidos uniformemente";
+                MessageBox.Show("Archivo de números aleatorios no válido.", "Error");
             }
         }
 
@@ -104,13 +68,7 @@ namespace Proyecto_final_Simulación
 
         double d(double a, int m)
         {
-            string[] lineas = Properties.Resources.Tabla_KS.Split('\n');
-            string[][] tabla = new string[lineas.Length][];
-
-            for (int i = 0; i < tabla.Length; i++)
-            {
-                tabla[i] = lineas[i].Split(',');
-            }
+            string[][] tabla = obtenerTablaKS();
 
             int columna = tabla[0].Length - 1;
 
@@ -134,16 +92,108 @@ namespace Proyecto_final_Simulación
 
             double resultado;
 
-            if (columna == tabla[0].Length - 1)
+            if (tabla[fila][columna] == "")
             {
-                resultado = Double.Parse(tabla[fila][columna]) / Math.Sqrt(m);
+                resultado = -1;
             }
             else
             {
-                resultado = Double.Parse(tabla[fila][columna]);
+                if (columna == tabla[0].Length - 1)
+                {
+                    resultado = Double.Parse(tabla[fila][columna]) / Math.Sqrt(m);
+                }
+                else
+                {
+                    resultado = Double.Parse(tabla[fila][columna]);
+                }
             }
 
             return resultado;
+        }
+
+        string[][] obtenerTablaKS()
+        {
+            string[] lineas = Properties.Settings.Default.TablaKS.Split('\n');
+
+            // Eliminar lineas vacias
+            lineas = lineas.Where(linea => !(string.IsNullOrEmpty(linea) || linea == "\r")).ToArray();
+
+            string[][] tabla = new string[lineas.Length][];
+
+            for (int i = 0; i < tabla.Length; i++)
+            {
+                tabla[i] = lineas[i].Split(',');
+            }
+
+            return tabla;
+        }
+
+        List<double> obtenerNumeros()
+        {
+            List<double> Xi = new List<double>();
+            string ruta = textBox1.Text;
+
+            if (Path.GetExtension(ruta).ToLower() == ".csv")
+            {
+                string texto = File.ReadAllText(ruta);
+
+                foreach (string n in texto.Split(','))
+                {
+                    Xi.Add(Double.Parse(n));
+                }
+            }
+            else if (Path.GetExtension(ruta).ToLower() == ".json")
+            {
+                string texto = File.ReadAllText(ruta);
+
+                Xi = JsonConvert.DeserializeObject<List<double>>(texto);
+            }
+
+            return Xi;
+        }
+
+        void pruebaKS(List<double> Xi)
+        {
+            List<double> Fxi = new List<double>();
+            List<double> Dm = new List<double>();
+
+            Xi.Sort();
+
+            int m = Xi.Count;
+
+            for (int i = 1; i <= m; i++)
+            {
+                Fxi.Add((double)i / (double)m);
+            }
+
+            for (int i = 0; i < m; i++)
+            {
+                Dm.Add(Math.Abs(Fxi[i] - Xi[i]));
+            }
+
+            double a = Double.Parse((string)cmbAlpha.SelectedItem);
+
+            lblM.Text = "m = " + m.ToString();
+            lblDm.Text = "Dm = " + Dm.Max().ToString();
+
+            double dam = d(a, m);
+
+            if (dam == -1)
+            {
+                MessageBox.Show("Valor d(α, m) no encontrado.");
+            }
+            {
+                lblDam.Text = "d(α, m) = " + dam.ToString();
+
+                if (Dm.Max() > dam)
+                {
+                    lblResultado.Text = "Dm > d(α, m)  ∴  No están distribuidos uniformemente";
+                }
+                else
+                {
+                    lblResultado.Text = "Dm < d(α, m)  ∴  Están distribuidos uniformemente";
+                }
+            }
         }
     }
 }

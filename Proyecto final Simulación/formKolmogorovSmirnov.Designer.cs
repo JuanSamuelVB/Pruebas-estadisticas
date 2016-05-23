@@ -98,6 +98,7 @@
             // 
             // cmbAlpha
             // 
+            this.cmbAlpha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAlpha.FormattingEnabled = true;
             this.cmbAlpha.Location = new System.Drawing.Point(46, 64);
             this.cmbAlpha.Name = "cmbAlpha";
