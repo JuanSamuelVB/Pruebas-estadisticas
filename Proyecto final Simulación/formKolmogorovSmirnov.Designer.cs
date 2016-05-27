@@ -147,7 +147,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "formKolmogorovSmirnov";
-            this.Text = "Kolmogorov-Smirnov";
+            this.Text = "Prueba de uniformidad Kolmogorov-Smirnov";
             this.ResumeLayout(false);
             this.PerformLayout();
 

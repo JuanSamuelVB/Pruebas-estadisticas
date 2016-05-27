@@ -28,23 +28,25 @@ namespace Proyecto_final_Simulación
                 BindingFlags.Instance | BindingFlags.SetProperty, null,
                 dataGridView1, new object[] { true });
 
-            if (this.tipotabla == Tabla.KS)
-            {
-                InicializarKS();
-            }
-            else if (this.tipotabla == Tabla.Chi)
-            {
-                InicializarChi();
-            }
+            Inicializar();
         }
 
-        void InicializarKS()
+        void Inicializar()
         {
-            this.Text = "Tabla Kolmogorov-Smirnov";
+            string[] lineas = new string[0];
             dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
 
-            //string[] lineas = Properties.Resources.Tabla_KS.Split('\n');
-            string[] lineas = Properties.Settings.Default.TablaKS.Split('\n');
+            if (tipotabla == Tabla.KS)
+            {
+                this.Text = "Tabla Kolmogorov-Smirnov";
+                lineas = Properties.Settings.Default.TablaKS.Split('\n');
+            }
+            else if (tipotabla == Tabla.Chi)
+            {
+                this.Text = "Tabla de chi-cuadrada";
+                lineas = Properties.Settings.Default.TablaChi.Split('\n');
+            }
 
             // Eliminar lineas vacias
             lineas = lineas.Where(linea => !(string.IsNullOrEmpty(linea) || linea == "\r")).ToArray();
@@ -69,14 +71,6 @@ namespace Proyecto_final_Simulación
             {
                 dataGridView1.Rows.Add(tabla[i]);
             }
-        }
-
-        void InicializarChi()
-        {
-            this.Text = "Tabla de chi-cuadrada";
-            dataGridView1.Rows.Clear();
-
-            // TODO
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -126,6 +120,10 @@ namespace Proyecto_final_Simulación
             {
                 Properties.Settings.Default.TablaKS = salida;
             }
+            else if (tipotabla == Tabla.Chi)
+            {
+                Properties.Settings.Default.TablaChi = salida;
+            }
 
             Properties.Settings.Default.Save();
 
@@ -139,19 +137,19 @@ namespace Proyecto_final_Simulación
 
             if (dr == DialogResult.Yes)
             {
-                Properties.Settings.Default.TablaKS = Properties.Settings.Default.TablaKSDefault;
+                if (tipotabla == Tabla.KS)
+                {
+                    Properties.Settings.Default.TablaKS = Properties.Settings.Default.TablaKSDefault;
+                }
+                else if (tipotabla == Tabla.Chi)
+                {
+                    Properties.Settings.Default.TablaChi = Properties.Settings.Default.TablaChiDefault;
+                }
             }
 
             Properties.Settings.Default.Save();
 
-            if (tipotabla == Tabla.KS)
-            {
-                InicializarKS();
-            }
-            else if (tipotabla == Tabla.Chi)
-            {
-                InicializarChi();
-            }
+            Inicializar();
         }
     }
 }

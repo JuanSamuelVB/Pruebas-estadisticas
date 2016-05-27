@@ -53,5 +53,33 @@ namespace Proyecto_final_Simulación.Properties {
                 this["TablaKSDefault"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"n,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+0.05,3.841,5.991,7.815,9.488,11.071,12.592,14.067,15.507,16.919,18.307,19.675,21.026,22.362,23.685,24.996,26.296,27.587,28.869,30.144,31.17,32.671,33.924,35.172,36.415,37.652,38.885,40.113,41.337,42.557,43.773
+")]
+        public string TablaChi {
+            get {
+                return ((string)(this["TablaChi"]));
+            }
+            set {
+                this["TablaChi"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"n,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+0.05,3.841,5.991,7.815,9.488,11.071,12.592,14.067,15.507,16.919,18.307,19.675,21.026,22.362,23.685,24.996,26.296,27.587,28.869,30.144,31.17,32.671,33.924,35.172,36.415,37.652,38.885,40.113,41.337,42.557,43.773
+")]
+        public string TablaChiDefault {
+            get {
+                return ((string)(this["TablaChiDefault"]));
+            }
+            set {
+                this["TablaChiDefault"] = value;
+            }
+        }
     }
 }

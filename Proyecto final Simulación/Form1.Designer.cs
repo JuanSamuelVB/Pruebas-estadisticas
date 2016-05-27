@@ -33,8 +33,11 @@
             this.métodoCongruencialMixtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebasEstadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolmogorovSmirnovToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.distanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolmogorovSmirnovToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.chicuadradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pókerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +72,9 @@
             // pruebasEstadísticasToolStripMenuItem
             // 
             this.pruebasEstadísticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kolmogorovSmirnovToolStripMenuItem});
+            this.kolmogorovSmirnovToolStripMenuItem,
+            this.distanciaToolStripMenuItem,
+            this.pókerToolStripMenuItem});
             this.pruebasEstadísticasToolStripMenuItem.Name = "pruebasEstadísticasToolStripMenuItem";
             this.pruebasEstadísticasToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.pruebasEstadísticasToolStripMenuItem.Text = "Pruebas estadísticas";
@@ -81,10 +86,18 @@
             this.kolmogorovSmirnovToolStripMenuItem.Text = "Kolmogorov-Smirnov";
             this.kolmogorovSmirnovToolStripMenuItem.Click += new System.EventHandler(this.kolmogorovSmirnovToolStripMenuItem_Click);
             // 
+            // distanciaToolStripMenuItem
+            // 
+            this.distanciaToolStripMenuItem.Name = "distanciaToolStripMenuItem";
+            this.distanciaToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.distanciaToolStripMenuItem.Text = "Distancia";
+            this.distanciaToolStripMenuItem.Click += new System.EventHandler(this.distanciaToolStripMenuItem_Click);
+            // 
             // tablasToolStripMenuItem
             // 
             this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kolmogorovSmirnovToolStripMenuItem1});
+            this.kolmogorovSmirnovToolStripMenuItem1,
+            this.chicuadradaToolStripMenuItem});
             this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
             this.tablasToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.tablasToolStripMenuItem.Text = "Tablas";
@@ -95,6 +108,20 @@
             this.kolmogorovSmirnovToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
             this.kolmogorovSmirnovToolStripMenuItem1.Text = "Kolmogorov-Smirnov";
             this.kolmogorovSmirnovToolStripMenuItem1.Click += new System.EventHandler(this.kolmogorovSmirnovToolStripMenuItem1_Click);
+            // 
+            // chicuadradaToolStripMenuItem
+            // 
+            this.chicuadradaToolStripMenuItem.Name = "chicuadradaToolStripMenuItem";
+            this.chicuadradaToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.chicuadradaToolStripMenuItem.Text = "Chi-cuadrada";
+            this.chicuadradaToolStripMenuItem.Click += new System.EventHandler(this.chicuadradaToolStripMenuItem_Click);
+            // 
+            // pókerToolStripMenuItem
+            // 
+            this.pókerToolStripMenuItem.Name = "pókerToolStripMenuItem";
+            this.pókerToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.pókerToolStripMenuItem.Text = "Póker";
+            this.pókerToolStripMenuItem.Click += new System.EventHandler(this.pókerToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -121,6 +148,9 @@
         private System.Windows.Forms.ToolStripMenuItem kolmogorovSmirnovToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tablasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kolmogorovSmirnovToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem distanciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chicuadradaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pókerToolStripMenuItem;
     }
 }
 
