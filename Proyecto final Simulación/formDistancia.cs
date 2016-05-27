@@ -200,11 +200,11 @@ namespace Proyecto_final_Simulación
                 dgvTabla.Rows.Add(i, Pi[i], FO[i], FEi[i], X2i[i]);
             }
 
-            double a = Double.Parse((string)cmbAlpha.SelectedItem);
+            double a = double.Parse((string)cmbAlpha.SelectedItem);
             
 
             lblTheta.Text = "θ = " + Theta.ToString();
-            lblSumaFO.Text = "Suma de FO = " + SumaFO.ToString();
+            lblSumaFO.Text = "ΣFO = " + SumaFO.ToString();
             lblX2.Text = "X2 = " + SumaX2i.ToString();
 
             double Xam = X(a, n);
@@ -233,7 +233,7 @@ namespace Proyecto_final_Simulación
             dgvTabla.Rows.Clear();
             lblTheta.Text = "θ";
             lblMarcas.Text = "";
-            lblSumaFO.Text = "Suma de FO";
+            lblSumaFO.Text = "ΣFO";
             lblX2.Text = "X2";
             lblXam.Text = "X(α, m)";
             lblResultado.Text = "";

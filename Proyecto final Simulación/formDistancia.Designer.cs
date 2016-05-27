@@ -42,13 +42,13 @@
             this.nudLS = new System.Windows.Forms.NumericUpDown();
             this.nudLI = new System.Windows.Forms.NumericUpDown();
             this.dgvTabla = new System.Windows.Forms.DataGridView();
-            this.lblMarcas = new System.Windows.Forms.Label();
-            this.lblSumaFO = new System.Windows.Forms.Label();
             this.i = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.X2i = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMarcas = new System.Windows.Forms.Label();
+            this.lblSumaFO = new System.Windows.Forms.Label();
             this.lblX2 = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.lblXam = new System.Windows.Forms.Label();
@@ -227,25 +227,6 @@
             this.dgvTabla.Size = new System.Drawing.Size(668, 245);
             this.dgvTabla.TabIndex = 14;
             // 
-            // lblMarcas
-            // 
-            this.lblMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMarcas.AutoSize = true;
-            this.lblMarcas.Location = new System.Drawing.Point(332, 319);
-            this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(0, 17);
-            this.lblMarcas.TabIndex = 15;
-            // 
-            // lblSumaFO
-            // 
-            this.lblSumaFO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSumaFO.AutoSize = true;
-            this.lblSumaFO.Location = new System.Drawing.Point(1005, 86);
-            this.lblSumaFO.Name = "lblSumaFO";
-            this.lblSumaFO.Size = new System.Drawing.Size(87, 17);
-            this.lblSumaFO.TabIndex = 16;
-            this.lblSumaFO.Text = "Suma de FO";
-            // 
             // i
             // 
             this.i.HeaderText = "i";
@@ -272,6 +253,25 @@
             this.X2i.HeaderText = "((FO - FE)^2) / FE";
             this.X2i.Name = "X2i";
             this.X2i.Width = 120;
+            // 
+            // lblMarcas
+            // 
+            this.lblMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMarcas.AutoSize = true;
+            this.lblMarcas.Location = new System.Drawing.Point(332, 319);
+            this.lblMarcas.Name = "lblMarcas";
+            this.lblMarcas.Size = new System.Drawing.Size(0, 17);
+            this.lblMarcas.TabIndex = 15;
+            // 
+            // lblSumaFO
+            // 
+            this.lblSumaFO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSumaFO.AutoSize = true;
+            this.lblSumaFO.Location = new System.Drawing.Point(1005, 86);
+            this.lblSumaFO.Name = "lblSumaFO";
+            this.lblSumaFO.Size = new System.Drawing.Size(36, 17);
+            this.lblSumaFO.TabIndex = 16;
+            this.lblSumaFO.Text = "ΣFO";
             // 
             // lblX2
             // 
