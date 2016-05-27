@@ -28,5 +28,29 @@ namespace Proyecto_final_Simulación
             formKolmogorovSmirnov fks = new formKolmogorovSmirnov();
             fks.Show();
         }
+
+        private void kolmogorovSmirnovToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            formTabla ft = new formTabla(formTabla.Tabla.KS);
+            ft.Show();
+        }
+
+        private void distanciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formDistancia fd = new formDistancia();
+            fd.Show();
+        }
+
+        private void chicuadradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formTabla ft = new formTabla(formTabla.Tabla.Chi);
+            ft.Show();
+        }
+
+        private void pókerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formPoker fp = new formPoker();
+            fp.Show();
+        }
     }
 }

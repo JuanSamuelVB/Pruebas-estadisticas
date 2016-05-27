@@ -98,6 +98,7 @@
             // 
             // cmbAlpha
             // 
+            this.cmbAlpha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAlpha.FormattingEnabled = true;
             this.cmbAlpha.Location = new System.Drawing.Point(46, 64);
             this.cmbAlpha.Name = "cmbAlpha";
@@ -146,7 +147,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "formKolmogorovSmirnov";
-            this.Text = "Kolmogorov-Smirnov";
+            this.Text = "Prueba de uniformidad Kolmogorov-Smirnov";
             this.ResumeLayout(false);
             this.PerformLayout();
 
