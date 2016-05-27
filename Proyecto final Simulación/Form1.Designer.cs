@@ -35,10 +35,11 @@
             this.kolmogorovSmirnovToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.distanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pókerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolmogorovSmirnovToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.chicuadradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chicuadradaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,8 @@
             this.kolmogorovSmirnovToolStripMenuItem,
             this.distanciaToolStripMenuItem,
             this.pókerToolStripMenuItem,
-            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem});
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem,
+            this.chicuadradaToolStripMenuItem1});
             this.pruebasEstadísticasToolStripMenuItem.Name = "pruebasEstadísticasToolStripMenuItem";
             this.pruebasEstadísticasToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.pruebasEstadísticasToolStripMenuItem.Text = "Pruebas estadísticas";
@@ -102,6 +104,13 @@
             this.pókerToolStripMenuItem.Text = "Póker";
             this.pókerToolStripMenuItem.Click += new System.EventHandler(this.pókerToolStripMenuItem_Click);
             // 
+            // corridasArribaYDebajoDeLaMediaToolStripMenuItem
+            // 
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Name = "corridasArribaYDebajoDeLaMediaToolStripMenuItem";
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Text = "Corridas arriba y debajo de la media";
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Click += new System.EventHandler(this.corridasArribaYDebajoDeLaMediaToolStripMenuItem_Click);
+            // 
             // tablasToolStripMenuItem
             // 
             this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -125,12 +134,12 @@
             this.chicuadradaToolStripMenuItem.Text = "Chi-cuadrada";
             this.chicuadradaToolStripMenuItem.Click += new System.EventHandler(this.chicuadradaToolStripMenuItem_Click);
             // 
-            // corridasArribaYDebajoDeLaMediaToolStripMenuItem
+            // chicuadradaToolStripMenuItem1
             // 
-            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Name = "corridasArribaYDebajoDeLaMediaToolStripMenuItem";
-            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
-            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Text = "Corridas arriba y debajo de la media";
-            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Click += new System.EventHandler(this.corridasArribaYDebajoDeLaMediaToolStripMenuItem_Click);
+            this.chicuadradaToolStripMenuItem1.Name = "chicuadradaToolStripMenuItem1";
+            this.chicuadradaToolStripMenuItem1.Size = new System.Drawing.Size(327, 26);
+            this.chicuadradaToolStripMenuItem1.Text = "Chi-cuadrada";
+            this.chicuadradaToolStripMenuItem1.Click += new System.EventHandler(this.chicuadradaToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -161,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem chicuadradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pókerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem corridasArribaYDebajoDeLaMediaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chicuadradaToolStripMenuItem1;
     }
 }
 

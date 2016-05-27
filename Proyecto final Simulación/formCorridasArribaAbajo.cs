@@ -27,6 +27,7 @@ namespace Proyecto_final_Simulación
             lblN1.Text = "N1";
             lblN2.Text = "N2";
             lblZ.Text = "Z0";
+            lblResultado.Text = "";
         }
 
         List<double> obtenerNumeros()

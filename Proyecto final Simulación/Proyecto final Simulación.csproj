@@ -55,6 +55,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formChiCuadrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formChiCuadrada.Designer.cs">
+      <DependentUpon>formChiCuadrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="formCongruencialMixto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formChiCuadrada.resx">
+      <DependentUpon>formChiCuadrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formCongruencialMixto.resx">
       <DependentUpon>formCongruencialMixto.cs</DependentUpon>
