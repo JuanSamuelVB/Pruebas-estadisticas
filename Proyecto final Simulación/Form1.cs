@@ -58,5 +58,11 @@ namespace Proyecto_final_Simulación
             formCorridasArribaAbajo fcaa = new formCorridasArribaAbajo();
             fcaa.Show();
         }
+
+        private void chicuadradaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            formChiCuadrada fcc = new formChiCuadrada();
+            fcc.Show();
+        }
     }
 }
