@@ -170,7 +170,7 @@
             1,
             0,
             0,
-            65536});
+            131072});
             this.nudLS.Location = new System.Drawing.Point(131, 97);
             this.nudLS.Maximum = new decimal(new int[] {
             1,

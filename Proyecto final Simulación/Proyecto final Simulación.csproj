@@ -61,6 +61,12 @@
     <Compile Include="formCongruencialMixto.Designer.cs">
       <DependentUpon>formCongruencialMixto.cs</DependentUpon>
     </Compile>
+    <Compile Include="formCorridasArribaAbajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCorridasArribaAbajo.Designer.cs">
+      <DependentUpon>formCorridasArribaAbajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="formDistancia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formCongruencialMixto.resx">
       <DependentUpon>formCongruencialMixto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCorridasArribaAbajo.resx">
+      <DependentUpon>formCorridasArribaAbajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formDistancia.resx">
       <DependentUpon>formDistancia.cs</DependentUpon>

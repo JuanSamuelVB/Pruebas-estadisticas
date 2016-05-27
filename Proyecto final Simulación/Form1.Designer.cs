@@ -34,10 +34,11 @@
             this.pruebasEstadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolmogorovSmirnovToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.distanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pókerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolmogorovSmirnovToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.chicuadradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pókerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.pruebasEstadísticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kolmogorovSmirnovToolStripMenuItem,
             this.distanciaToolStripMenuItem,
-            this.pókerToolStripMenuItem});
+            this.pókerToolStripMenuItem,
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem});
             this.pruebasEstadísticasToolStripMenuItem.Name = "pruebasEstadísticasToolStripMenuItem";
             this.pruebasEstadísticasToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.pruebasEstadísticasToolStripMenuItem.Text = "Pruebas estadísticas";
@@ -82,16 +84,23 @@
             // kolmogorovSmirnovToolStripMenuItem
             // 
             this.kolmogorovSmirnovToolStripMenuItem.Name = "kolmogorovSmirnovToolStripMenuItem";
-            this.kolmogorovSmirnovToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.kolmogorovSmirnovToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
             this.kolmogorovSmirnovToolStripMenuItem.Text = "Kolmogorov-Smirnov";
             this.kolmogorovSmirnovToolStripMenuItem.Click += new System.EventHandler(this.kolmogorovSmirnovToolStripMenuItem_Click);
             // 
             // distanciaToolStripMenuItem
             // 
             this.distanciaToolStripMenuItem.Name = "distanciaToolStripMenuItem";
-            this.distanciaToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.distanciaToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
             this.distanciaToolStripMenuItem.Text = "Distancia";
             this.distanciaToolStripMenuItem.Click += new System.EventHandler(this.distanciaToolStripMenuItem_Click);
+            // 
+            // pókerToolStripMenuItem
+            // 
+            this.pókerToolStripMenuItem.Name = "pókerToolStripMenuItem";
+            this.pókerToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
+            this.pókerToolStripMenuItem.Text = "Póker";
+            this.pókerToolStripMenuItem.Click += new System.EventHandler(this.pókerToolStripMenuItem_Click);
             // 
             // tablasToolStripMenuItem
             // 
@@ -116,12 +125,12 @@
             this.chicuadradaToolStripMenuItem.Text = "Chi-cuadrada";
             this.chicuadradaToolStripMenuItem.Click += new System.EventHandler(this.chicuadradaToolStripMenuItem_Click);
             // 
-            // pókerToolStripMenuItem
+            // corridasArribaYDebajoDeLaMediaToolStripMenuItem
             // 
-            this.pókerToolStripMenuItem.Name = "pókerToolStripMenuItem";
-            this.pókerToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.pókerToolStripMenuItem.Text = "Póker";
-            this.pókerToolStripMenuItem.Click += new System.EventHandler(this.pókerToolStripMenuItem_Click);
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Name = "corridasArribaYDebajoDeLaMediaToolStripMenuItem";
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Text = "Corridas arriba y debajo de la media";
+            this.corridasArribaYDebajoDeLaMediaToolStripMenuItem.Click += new System.EventHandler(this.corridasArribaYDebajoDeLaMediaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -151,6 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem distanciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chicuadradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pókerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem corridasArribaYDebajoDeLaMediaToolStripMenuItem;
     }
 }
 

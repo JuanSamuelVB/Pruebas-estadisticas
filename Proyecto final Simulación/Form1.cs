@@ -52,5 +52,11 @@ namespace Proyecto_final_Simulación
             formPoker fp = new formPoker();
             fp.Show();
         }
+
+        private void corridasArribaYDebajoDeLaMediaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formCorridasArribaAbajo fcaa = new formCorridasArribaAbajo();
+            fcaa.Show();
+        }
     }
 }
